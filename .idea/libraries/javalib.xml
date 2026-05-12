@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="javalib" type="kotlin.js">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/proj0/javalib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
