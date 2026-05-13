@@ -32,16 +32,16 @@ public class TimeSLList {
         for(int N = 1000;N<= 128000;N*=2){
             SLList<Integer> testLists = new SLList<>();
             for(int i = 0; i < N; i++){
-                testLists.addLast(N);
+                testLists.addFirst(i);
             }
             Stopwatch sw = new Stopwatch();
-            for(int j = 0; j< N;j++){
+            for(int j = 0; j< M;j++){
                 testLists.getLast();
             }
             double time = sw.elapsedTime();
             Ns.addLast(N);
             times.addLast(time);
-            Counts.addLast(N);
+            Counts.addLast(M);
 
         }
         printTimingTable(Ns,times,Counts);
