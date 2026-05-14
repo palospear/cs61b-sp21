@@ -84,7 +84,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
             return null;
         }
         Node current = sentinel.next;
-        for (int i = 0; i < index; i++){
+        for (int i = 0; i < index; i++) {
             current = current.next;
         }
         return current.item;
@@ -135,7 +135,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
         if (this.size() != other.size()) {
             return false;
         }
-        for (int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             if (!(this.get(i).equals(other.get(i)))) {
                 return false;
             }
