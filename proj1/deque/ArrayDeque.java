@@ -96,7 +96,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
     private void resize(int capacity) {
         T[] newArray = (T[]) new Object[capacity];
         int currentIndex = plusOne(nextFirst);
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++){
             newArray[i] = items[currentIndex];
             currentIndex = plusOne(currentIndex);
         }
@@ -113,7 +113,7 @@ public class ArrayDeque<T> implements Deque<T>, Iterable<T> {
     private class ArrayDequeIterator implements Iterator<T> {
         private int wizPos;
 
-        public ArrayDequeIterator() {
+        ArrayDequeIterator() {
             wizPos = 0;
         }
 

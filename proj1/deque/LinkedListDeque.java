@@ -3,11 +3,11 @@ import java.util.Iterator;
 
 public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
     private class Node {
-        public Node prev;
-        public T item;
-        public Node next;
+        Node prev;
+        T item;
+        Node next;
 
-        public Node(Node p, T i, Node n) {
+        Node(Node p, T i, Node n) {
             prev = p;
             item = i;
             next = n;
@@ -84,7 +84,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
             return null;
         }
         Node current = sentinel.next;
-        for(int i = 0; i < index; i++){
+        for (int i = 0; i < index; i++){
             current = current.next;
         }
         return current.item;
@@ -111,7 +111,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
 
     private class LinkedListDequeIterator implements Iterator<T> {
         private Node p;
-        public LinkedListDequeIterator() {
+        LinkedListDequeIterator() {
             p = sentinel.next;
         }
         public boolean hasNext() {
@@ -135,8 +135,8 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
         if (this.size() != other.size()) {
             return false;
         }
-        for(int i = 0; i < size; i++){
-            if(!(this.get(i).equals(other.get(i)))) {
+        for (int i = 0; i < size; i++){
+            if (!(this.get(i).equals(other.get(i)))) {
                 return false;
             }
         }
